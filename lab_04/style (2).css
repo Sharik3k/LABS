@@ -1,87 +1,192 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+main {
+    .main {
+        background: url(img/Maps.png) center;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background: black;
+        height: 548px;
+    }
+
+    .lefttext {
+        color: white;
+
+        h1 {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 70px;
+            line-height: 70px;
+        }
+    }
+
+    .righttext {
+        color: white;
+
+        h2 {
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 30px;
+            color: lightsalmon;
+        }
+
+        p {
+            max-width: 540px;
+            font-family: 'Outfit';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+    button:hover {
+        .rightbutton {
+            background: lightsalmon;
+        }
+
+        .leftbutton {
+            background: black;
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        position: absolute;
+        display: flex;
+        width: 200px;
+        height: 70px;
+        padding: 0;
+        margin: 0;
+        left: 100px;
+        top: 0px;
+    }
+
+    button .rightbutton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 650;
+        font-size: 18px;
+        line-height: 24px;
+
+        width: 215px;
+        height: 60px;
+        color: white;
+        background: black;
+    }
+
+    button .leftbutton {
+        transform: scaleX(-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: xx-large;
+        color: white;
+        background: lightsalmon;
+
+        width: 70px;
+        height: 70px;
+    }
 }
 
-.map-section {
-    position: relative;
-}
-
-.map {
-    width: 100%;
-    height: auto;
-    border: none;
-}
-
-.back-button {
-    position: absolute;
-    top: 0px;
-    left: 200px;
-    background-color: #000000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-
-
-.hover {
-    background-color: #e57a20;
-}
-}
-.second {
-    background-color: #333;
-    color: white;
-    padding: 40px;
-    text-align: left;
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
- address p {
-    font-style: normal;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-p {
-    font-size: 16px;
-    line-height: 1.5;
-}
-}
 footer {
-    background-color: #f68b28;
-    padding: 20px;
-    text-align: center;
-    color: white;
+    .footer {
+        background: lightsalmon;
+        height: 230px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer_text {
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .footer_text p {
+        width: 400px;
+        font-family: 'Outfit';
+        font-style: normal;
+        font-weight: 250;
+        font-size: 17px;
+        line-height: 30px;
+    }
 }
 
-.footer-content {
-    max-width: 900px;
-    margin: 0 auto;
+@media (max-width: 1160px) {
+    main {
+        .lefttext {
+            h1 {
+                font-size: 50px;
+                line-height: 60px;
+            }
+        }
+
+        .righttext {
+            p {
+                max-width: 340px;
+            }
+        }
+    }
+
+    footer {
+        .footer {
+            p {
+                width: 300px;
+            }
+        }
+    }
 }
 
-.social-icons a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    .hover {
-    text-decoration: underline;
-}
-.a{
-    color: white;
-    text-decoration:none ;
-  }
+@media (max-width: 760px) {
+    main {
+        button {
+            left: 0;
+        }
+
+        .box {
+            display: block;
+            padding-left: 10px;
+            padding-top: 15px;
+        }
+
+        .lefttext {
+            h1 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    footer {
+        .footer_text {
+            display: block;
+            padding-left: 10px;
+        }
+
+        .footer_text p {
+            font-size: 16px;
+            max-width: 310px;
+        }
+    }
 }

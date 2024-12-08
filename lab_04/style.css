@@ -1,0 +1,345 @@
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    margin-bottom: 180px;
+    max-width: 1475px;
+}
+
+header .black_box {
+    background: black;
+    background-size: cover;
+    width: 540px;
+    height: 840px;
+}
+
+header .image {
+    width: 640px;
+    height: 850px;
+    background: url(img/Rectangle.jpg) center;
+    background-size: cover;
+}
+
+header h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 76px;
+    line-height: 88px;
+    color: white;
+    position: absolute;
+    left: 220px;
+    top: 100px;
+}
+
+header p {
+    width: 350px;
+    height: 160px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    color: gray;
+    position: absolute;
+    left: 1100px;
+    top: 190px;
+}
+
+header button:hover .leftbutton {
+    background: lightsalmon;
+}
+
+header button:hover .rightbutton {
+    background: black;
+}
+
+header button {
+    background: none;
+    border: none;
+    position: absolute;
+    display: flex;
+    width: 300px;
+    height: 72px;
+    padding: 0;
+    margin: 0;
+    left: 1100px;
+    top: 450px;
+}
+
+header button .leftbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 24px;
+    width: 230px;
+    height: 72px;
+    color: white;
+    background: black;
+}
+
+header button .rightbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: white;
+    background: lightsalmon;
+    width: 70px;
+    height: 72px;
+}
+
+main article {
+    display: flex;
+    justify-content: center;
+}
+
+main article .images {
+    background: url(img/Rectangle_1.jpg) center;
+    background-size: cover;
+    width: 635px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+
+main article .text {
+    max-width: 350px;
+}
+
+main article .text h1 {
+    max-width: 350px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    color: black;
+}
+
+main article .text p {
+    max-width: 350px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 32px;
+    color: #444444;
+}
+
+main article .main {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main article .main2 {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main article .main2 .images {
+    background: url(img/Rectangle_Copy_2.jpg) center;
+    background-size: cover;
+    width: 635px;
+    height: 720px;
+}
+
+main article .main2 .images2 {
+    background: url(img/Rectangle_Copy_4.jpg) center;
+    background-size: cover;
+    width: 445px;
+    height: 313px;
+    margin-bottom: 30px;
+}
+
+main article .main2 .black_box {
+    background: black;
+    width: 445px;
+    height: 377px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+main article .main2 .black_box h1 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+main article .main2 .black_box p {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+main article .main2 .black_box .text2 {
+    width: 350px;
+    height: 240px;
+}
+
+footer {
+    margin-top: 200px;
+    max-width: 100%;
+    color: white;
+}
+
+footer .footer {
+    background: black;
+    height: 244px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer .text {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+footer .footer .text p {
+    width: 430px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@media (max-width: 1160px) {
+    header .black_box {
+        width: 0px;
+    }
+
+    header .image {
+        width: 450px;
+    }
+
+    header h1 {
+        mix-blend-mode: normal;
+        color: black;
+        left: 400px;
+        font-size: 50px;
+        line-height: 80px;
+    }
+
+    header p {
+        top: 390px;
+        left: 400px;
+    }
+
+    header button {
+        top: 650px;
+        left: 400px;
+    }
+
+    main article .article1 {
+        justify-content: space-evenly;
+    }
+
+    main article .main2 {
+        justify-content: space-evenly;
+    }
+
+    main article .main2 .images {
+        width: 500px;
+    }
+
+    main article .main2 .images2 {
+        width: 240px;
+    }
+
+    main article .main2 .black_box {
+        width: 240px;
+    }
+
+    main article .main2 .black_box .text-box-2 {
+        width: 200px;
+    }
+
+    main article .main2 .black_box h1 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 760px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .black_box {
+        display: none;
+    }
+
+    header .image {
+        width: 320px;
+        height: 240px;
+    }
+
+    header h1 {
+        position: static;
+        padding-left: 10px;
+    }
+
+    header p {
+        max-width: 310px;
+        position: static;
+        padding-left: 10px;
+    }
+
+    header button {
+        position: static;
+        padding-left: 10px;
+    }
+
+    main article .main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    main article .main .images-box {
+        width: 310px;
+    }
+
+    main article .main2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main article .main2 .images-box {
+        width: 310px;
+    }
+
+    main article .main2 .images2 {
+        width: 310px;
+    }
+
+    main article .main2 .black_box {
+        width: 310px;
+        align-items: center;
+    }
+
+    main article .main2 .black_box .text-box-2 {
+        width: 300px;
+    }
+
+    footer .footer .text {
+        display: block;
+        padding-left: 10px;
+    }
+
+    footer .footer .text p {
+        font-size: 16px;
+        width: 310px;
+    }
+}

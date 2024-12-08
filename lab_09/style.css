@@ -1,33 +1,39 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 10px;
-    justify-content: center;
-  }
-  .card {
-    width: 100px;
-    height: 100px;
-    background-color: #007BFF;
-    color: white;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 8px;
-    user-select: none;
-  }
-  .card.matched {
-    background-color: #28a745;
-    cursor: default;
-  }
-  .card.hidden {
-    background-color: #6c757d;
-    color: transparent;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.card.hidden {
+  background-color: #999;
+  color: transparent;
+  cursor: pointer;
+}
+
+.card.correct {
+  background-color: #4CAF50;
+  color: white;
+  pointer-events: none;
+}

@@ -1,60 +1,46 @@
-
-    const cardValues = ['🍎', '🍌', '🍒', '🍇', '🍎', '🍌', '🍒', '🍇', '🍉']; // Значення на картках
-    let shuffledCards = [...cardValues].sort(() => Math.random() - 0.5); // Перемішані картки
-    let firstCard = null; 
-    let secondCard = null; 
-    let matchedPairs = 0; 
+const board = document.getElementById('game-board');
 
 
-    const grid = document.getElementById("game-grid");
-    shuffledCards.forEach((value, index) => {
-      const card = document.createElement("div");
-      card.classList.add("card", "hidden");
-      card.dataset.value = value; 
-      card.dataset.index = index; 
-      card.addEventListener("click", () => handleCardClick(card)); 
-      grid.appendChild(card);
-    });
+const numbers = Array.from({ length: 8 }, (_, i) => i + 1);
+const cards = [...numbers, ...numbers].sort(() => Math.random() - 0.5);
 
-    
-    function handleCardClick(card) {
-      
-      if (!card.classList.contains("hidden") || secondCard) return;
 
-    
-      card.textContent = card.dataset.value;
-      card.classList.remove("hidden");
+cards.forEach((number) => {
+    const card = document.createElement('div');
+    card.classList.add('card', 'hidden');
+    card.textContent = number;
+    card.dataset.number = number;
+    board.appendChild(card);
+});
 
-      if (!firstCard) {
-    
-        firstCard = card;
-      } else {
-        
-        secondCard = card;
+let firstCard = null;
+let secondCard = null;
 
-        
-        if (firstCard.dataset.value === secondCard.dataset.value) {
-        
-          firstCard.classList.add("matched");
-          secondCard.classList.add("matched");
-          firstCard = null;
-          secondCard = null;
-          matchedPairs++;
+board.addEventListener('click', (e) => {
+    const clickedCard = e.target;
 
-        
-          if (matchedPairs === cardValues.length / 2) {
-            setTimeout(() => alert("Вітаємо! Ви знайшли всі пари!"), 300);
-          }
-        } else {
-    
-          setTimeout(() => {
-            firstCard.textContent = "";
-            secondCard.textContent = "";
-            firstCard.classList.add("hidden");
-            secondCard.classList.add("hidden");
-            firstCard = null;
-            secondCard = null;
-          }, 1000);
-        }
-      }
+    if (!clickedCard.classList.contains('card') || clickedCard.classList.contains('correct') || clickedCard === firstCard) {
+        return;
     }
+
+    clickedCard.classList.remove('hidden');
+
+    if (!firstCard) {
+        firstCard = clickedCard;
+    } else {
+        secondCard = clickedCard;
+
+        if (firstCard.dataset.number === secondCard.dataset.number) {
+            firstCard.classList.add('correct');
+            secondCard.classList.add('correct');
+        } else {
+            setTimeout(() => {
+                firstCard.classList.add('hidden');
+                secondCard.classList.add('hidden');
+            }, 1000);
+        }
+
+        firstCard = null;
+        secondCard = null;
+    }
+});
