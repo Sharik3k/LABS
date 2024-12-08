@@ -4,9 +4,13 @@ function toggleFolder(folderId) {
 
     if (folderContent.style.display === "none" || folderContent.style.display === "") {
         folderContent.style.display = "block";
-        icon.src = "images/open.png"; 
+        if (icon) {
+            icon.src = "image/open.png"; 
+        }
     } else {
         folderContent.style.display = "none";
-        icon.src = "images/folder.png"; 
+        if (icon) {
+            icon.src = "image/folder.png"; 
+        }
     }
 }
