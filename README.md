@@ -11,5 +11,5 @@ https://Sharik3k.github.io/LABS/lab_08 - file manager
 https://Sharik3k.github.io/LABS/lab_09/ - cards
 https://Sharik3k.github.io/LABS/lab_10 - tanki
 https://Sharik3k.github.io/LABS/lab_11/ - jobs 
-https://Sharik3k.github.io/LABS/lab_12/ - pokemon 
+https://Sharik3k.github.io/LABS/lab_12/  - pokemon 
  
